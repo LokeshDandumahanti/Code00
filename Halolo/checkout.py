@@ -45,13 +45,13 @@ st.title('Transaction')
 
 # Function to open Google Pay page with the specified amount and QR code image
 def open_google_pay(amount, qr_code_path):
-    url = f'https://wallet.google/'
+    url = f'https://pay.google.com/about/pay-online/'
     webbrowser.open(url)
 
 # Transaction section
 
 amount = st.number_input('Enter Amount', int(total_price))
-qr_code_path = "C:/Users/vijay/OneDrive/Desktop/jiven.jpg"  # Path to your QR code image
+qr_code_path = "jiven.jpg"  # Path to your QR code image
 if st.button('Buy'):
     open_google_pay(amount, qr_code_path)
     st.success(f'Opened Google Pay page for ₹{amount:.2f} payment.')
