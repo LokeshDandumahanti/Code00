@@ -50,6 +50,7 @@ def inventory_management(file_path, order_file_path):
 
     total_price = order_chocolate * chocolate_price + order_pasta * pasta_price
     st.subheader(total_price) 
+    st.session_state.total_price = total_price
 
     if st.button('Order'):
         new_total_chocolate = df.loc[0, 'chocolate'] - order_chocolate
@@ -60,8 +61,7 @@ def inventory_management(file_path, order_file_path):
             df.to_csv(file_path, index=False)
 
             # Calculate total price
-            total_price = order_chocolate * chocolate_price + order_pasta * pasta_price
-            st.session_state.total_price = total_price
+
 
             # Add order to order.csv
             if not os.path.exists(order_file_path):
