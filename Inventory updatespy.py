@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-file_path = "C:/Users/vijay/OneDrive/Desktop/chocolate.csv"
+file_path = "chocolate.csv"
 df = pd.read_csv(file_path)
 
 st.title('Entries')
