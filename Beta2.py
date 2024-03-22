@@ -82,6 +82,6 @@ def inventory_management(file_path, order_file_path):
         st.warning('Incorrect password. Please try again.')
 
 # Example usage
-file_path = "C:/Users/vijay/OneDrive/Desktop/chocolate.csv"
-order_file_path = "C:/Users/vijay/OneDrive/Desktop/Order.csv"
+file_path = "chocolate.csv"
+order_file_path = "Order.csv"
 inventory_management(file_path, order_file_path)
