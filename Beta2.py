@@ -41,7 +41,7 @@ def inventory_management(file_path, order_file_path):
     st.write(df)
 
     # Display total price
-    st.write(f'Total Price: {st.session_state.total_price}')
+   
 
     # Allow users to place an order for chocolates and pasta
     st.header('Place an Order')
@@ -49,8 +49,7 @@ def inventory_management(file_path, order_file_path):
     order_pasta = st.number_input('Enter the quantity of pasta to order:', min_value=0, max_value=df['pasta'].sum())
 
     total_price = order_chocolate * chocolate_price + order_pasta * pasta_price
-     
-    st.session_state.total_price = total_price
+    st.write(f'Total Price: {total_price})
 
     if st.button('Order'):
         new_total_chocolate = df.loc[0, 'chocolate'] - order_chocolate
