@@ -10,7 +10,8 @@ users = {
 }
 
 def sign_in():
-    st.title('Sign In')
+    st.title('Halolo....')
+    st.subheader('where hunger meets comfort')
     username = st.text_input('Username')
     password = st.text_input('Password', type='password')
     if st.button('Sign In'):
@@ -36,7 +37,7 @@ def inventory_management(file_path, order_file_path):
     st.title('Inventory Management')
 
     # Display current inventory for chocolates and pasta
-    st.header('Chocolates and Pasta Inventory')
+    st.header('Savouries and Stationary')
     st.write(df)
 
     # Display total price
@@ -46,6 +47,9 @@ def inventory_management(file_path, order_file_path):
     st.header('Place an Order')
     order_chocolate = st.number_input('Enter the quantity of chocolate to order:', min_value=0, max_value=df['chocolate'].sum())
     order_pasta = st.number_input('Enter the quantity of pasta to order:', min_value=0, max_value=df['pasta'].sum())
+
+    total_price = order_chocolate * chocolate_price + order_pasta * pasta_price
+    st.subheader(total_price) 
 
     if st.button('Order'):
         new_total_chocolate = df.loc[0, 'chocolate'] - order_chocolate
