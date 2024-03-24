@@ -9,19 +9,40 @@ users = {
     'user3': 'password3'
 }
 
+import streamlit as st
+
 def sign_in():
-    title_html = """
-    <div style="background-color: #f4a261; padding: 10px; border-radius: 10px;">
-        <h1 style="color: white; text-align: center; font-size: 36px; font-family: 'Arial Black', Gadget, sans-serif;">Halolo</h1>
-        <h3 style="color: white; text-align: center; font-size: 20px; font-family: 'Arial', sans-serif; margin-top: -10px;">where hunger meets comfort</h3>
-    </div>
-    """
+    # Define the CSS styles for the app
+    st.markdown(
+        """
+        <style>
+        body {
+            color: white;
+            background-color: #f4a261;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 0;
+        }
+        h3 {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+        .stTextInput>div>div>input {
+            color: black !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-# Display the styled title
-    st.markdown(title_html, unsafe_allow_html=True)
-
-
-    
+    # Display the styled title
+    st.title('Halolo')
     st.subheader('where hunger meets comfort')
     username = st.text_input('Username')
     password = st.text_input('Password', type='password')
@@ -33,6 +54,7 @@ def sign_in():
             st.success(f'Welcome {username}')
         else:
             st.error('Invalid username or password.')
+
 
 def inventory_management(file_path, order_file_path):
     if 'signed_in' not in st.session_state or not st.session_state.signed_in:
