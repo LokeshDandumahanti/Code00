@@ -21,8 +21,6 @@ def sign_in():
     st.markdown(title_html, unsafe_allow_html=True)
 
 
-# Display the styled title
-    st.markdown(title_html, unsafe_allow_html=True)
     
     st.subheader('where hunger meets comfort')
     username = st.text_input('Username')
