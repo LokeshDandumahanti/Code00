@@ -14,7 +14,7 @@ def sign_in():
     <div style="background-color: #f4a261; padding: 10px; border-radius: 10px;">
         <h1 style="color: white; text-align: center; font-size: 36px; font-family: 'Arial Black', Gadget, sans-serif;">Your Food Company Name</h1>
     </div>
-"""
+    """
 
 # Display the styled title
     st.markdown(title_html, unsafe_allow_html=True)
