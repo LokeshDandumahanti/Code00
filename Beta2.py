@@ -12,7 +12,7 @@ users = {
 def sign_in():
     title_html = """
     <div style="background-color: #f4a261; padding: 10px; border-radius: 10px;">
-        <h1 style="color: white; text-align: center; font-size: 36px; font-family: 'Arial Black', Gadget, sans-serif;">Your Food Company Name</h1>
+        <h1 style="color: white; text-align: center; font-size: 36px; font-family: 'Arial Black', Gadget, sans-serif;">Halolo</h1>
         <h3 style="color: white; text-align: center; font-size: 20px; font-family: 'Arial', sans-serif; margin-top: -10px;">where hunger meets comfort</h3>
     </div>
     """
