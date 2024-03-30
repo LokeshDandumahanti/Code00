@@ -6,6 +6,7 @@ from PIL import Image
 # Dictionary to store usernames and passwords
 users = {
     'user1': {'password': 'password1', 'room_number': 'R01'},
+    'Dibendhu747' : {'password': 'Ghosh1234', 'room_number' : 'R22'},
     'user2': {'password': 'password2', 'room_number': 'T12'},
     'user3': {'password': 'password3', 'room_number': 'S34'}
 }
